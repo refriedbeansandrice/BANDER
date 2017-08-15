@@ -1,0 +1,23 @@
+img {
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", fantasy;
+  font-size: 300%;
+  color: maroon;
+}
+
+body {
+  text-align: center;
+  background-color: lightgrey;
+  background-repeat: no-repeat;
+  background-image: url(http://jillsorensen.com/wp-content/2014/05/New-York-City-Empire-State-Building_www.FullHDWpp.com_-1728x1080.jpg);
+}
+
+input {
+  width: 20%;
+}
