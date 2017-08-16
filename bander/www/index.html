@@ -39,39 +39,35 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Hello World</title>
+    <title>Bander Log in</title>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 
 <body>
-    <div class="app">
-        <h1>PhoneGap</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
-        </div>
-    </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
-    
-<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDh2jRKkQi1KxZIzEdxNBZKVUE2ZcDCfSk",
-    authDomain: "banderfirebase.firebaseapp.com",
-    databaseURL: "https://banderfirebase.firebaseio.com",
-    projectId: "banderfirebase",
-    storageBucket: "banderfirebase.appspot.com",
-    messagingSenderId: "568834129618"
-  };
-  firebase.initializeApp(config);
-</script>
+    <!--<h1>BANDER</h1>
+    <h2>Welcome!</h2>
+    <h3> Sign up </h3>
+    <p>Username:</p>
+    <input type="text" id="Username"></input>
+    <br>
+    <p>Password:</p>
+    <input type="text" id="Password"></input>
+    <br><br>
+    <button onclick="storeData()">Store Data!</button>
+    <br> -->
+    <h1>BANDER</h1>
+    <h2>Welcome!</h2>
+    <p>Username:</p>
+    <input type="text" id="loadKey"></input>
+    <br><br>
+    <p>Password:</p>
+    <input type="text" id="loadKey"></input>
+    <br><br>
+    <button onclick="loadData()">Login</button>
+    <br>
+    <p id="loadValue"><!-- this will lead to that person's profile who logged in --></p>
+
 </body>
 
 </html>
