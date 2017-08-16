@@ -1,0 +1,27 @@
+button{
+  border-radius: 50%;
+  color: white;
+  width: 15%;
+  padding: 10% 10%;
+  text-align: center;
+}
+
+div{
+  text-align: center;
+}
+
+.menu{
+}
+
+.userPhoto{
+  display: block;
+  margin: auto;
+}
+
+p{
+  text-align: center;
+}
+
+h1{
+  text-align: left;
+}
