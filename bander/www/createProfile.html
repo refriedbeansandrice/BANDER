@@ -3,41 +3,30 @@
 <html>
 
 <head>
-<script src = "createProfileJS.js"></script>
+  <link rel="stylesheet" type="text/css" href="C:/Users/Girls Who Code/Desktop/sonjaBandr/BANDER/bander/www/css/createProfile.css">
+  <script src="C:/Users/Girls Who Code/Desktop/sonjaBandr/BANDER/bander/www/js/createProfileJS.js"></script>
 </head>
 
 <body>
+    <div class="sorry"> Profile Pic:<br>
 
-<!--  <form enctype="multipart/form-data" action="uploader.php" method="POST">
-  <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-  Choose a file to upload: <input name="uploadedfile" type="file" /><br />
-  <input type="submit" value="Upload File" />
-</form> -->
-
-Profile Pic:<br>
-<textarea id="imgName" name="pfp" rows="4" cols="30">
-copy paste your profile pic HTML here (sorry)
-</textarea>
-
-<img id="profileImg" src="help" height="200">
-
-<form>
-  Name and Last name:<br>
-  <input type="text" name="user"><br>
-</form>
-<form>
-  Intruments:<br>
-  <input type="text" name="pass">
-</form>
-Select Gender:<br>
-<select name="gender">
-  <option value="female">F</option>
-  <option value="male">M</option>
-  <option value="n/a">Unspecified</option>
-</select>
-<br><br><textarea name="about" rows="10" cols="30">
-Write a short 'about you' here!
-</textarea>
+    <br>
+    <form>Name:<br>
+      <input type="text" id="name"><br>
+    </form>
+    <form>
+      Instruments:<br>
+      <input type="text" id="instruments">
+    </form>
+    <p>Select Gender:
+    <select id="gender">
+      <option value="female">F</option>
+      <option value="male">M</option>
+      <option value="uns">Unspecified</option></p>
+    </select>
+    <br><br>
+    <textarea id="about" rows="10" cols="30">Write a short 'about you' here!</textarea>
+    </div>
 </body>
 
 </html>
