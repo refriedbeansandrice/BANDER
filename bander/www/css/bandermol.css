@@ -1,3 +1,44 @@
+.dropbtn {
+    background-color: red;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    font-family: "Impact", fantasy;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #darkred}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
 img {
   display: block;
   margin: auto;
@@ -6,18 +47,50 @@ img {
 
 h1 {
   text-align: center;
-  font-family: "Times New Roman", fantasy;
-  font-size: 300%;
-  color: maroon;
+  font-family: "Impact", fantasy;
+  font-size: 250%;
+  color: red;
 }
 
 body {
-  text-align: center;
   background-color: lightgrey;
   background-repeat: no-repeat;
+  text-align: center;
   background-image: url(http://jillsorensen.com/wp-content/2014/05/New-York-City-Empire-State-Building_www.FullHDWpp.com_-1728x1080.jpg);
 }
 
+/*search button details
 input {
   width: 10%;
+  background-color: red;
+  border: none;
+  color: color;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}*/
+
+
+/*search bar width
+input[type=text]:focus {
+    width: 50%;
+    text-align: left;
 }
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 6px 12px 6px 30px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+} */
