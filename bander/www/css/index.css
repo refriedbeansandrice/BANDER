@@ -9,5 +9,24 @@ h2 {
 }
 
 input {
-    width: 60%;
+    width: 40%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+body {
+    background-image: url("andre-benz.jpg");
+
+
 }
