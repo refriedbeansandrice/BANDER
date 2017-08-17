@@ -1,27 +1,71 @@
+/*side bar*/
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.box-shadow-menu{
+  position: relative;
+  padding-left: 1.25em;
+}
+
+.box-shadow-menu:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: black;
+  box-shadow:
+    0 0.25em 0 0 black,
+    0 0.5em 0 0 black;
+}
+
+/*NOT-MENU STUFF*/
+/*"body" of page*/
+#not-menu{
+  transition: margin-left .5s;
+  padding: 10%;
+  text-align: center;
+}
+
+/*user photo*/
+.userPhoto{
+  display: block;
+  margin: auto;
+}
+
+/*like button*/
 button{
   border-radius: 50%;
   color: white;
   width: 15%;
   padding: 10% 10%;
   text-align: center;
-}
-
-div{
-  text-align: center;
-}
-
-.menu{
-}
-
-.userPhoto{
-  display: block;
-  margin: auto;
-}
-
-p{
-  text-align: center;
-}
-
-h1{
-  text-align: left;
 }

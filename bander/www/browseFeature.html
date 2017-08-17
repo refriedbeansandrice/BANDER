@@ -2,27 +2,38 @@
 <html>
 <head>
   <title>Browse Feature</title>
+  <script src="js/browseFeature.js"></script>
   <link rel = "stylesheet" type = "text/css" href = "css/browseFeature.css">
 </head>
-  <a href="#menu">
-    <img class="menu" src="img/threelines.png" alt="menu icon" style="width: 10%; height: 10%"></img>
-    Menu
-  </a>
-</h1>
 
 <body>
-  <p>instruments</p>
-  <p>experience</p>
-  <p>location</p>
-  <img class = "userPhoto" src = "img/defaultProf.png" alt="default profile image" style="width: 30%; height: 30%">
-  <p> username</p>
-  <p> Name</p>
 
-  <div>
+  <!--Sidenav menu-->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Browse</a>
+    <a href="#">Your Profile</a>
+    <a href="#">Saved Profiles</a>
+    <a href="#">Log Out</a>
+  </div>
+
+  <!--Hamburger icon-->
+  <a class = "box-shadow-menu" onclick="openNav()"></a>
+
+  <!--User Profile-->
+  <div id = "not-menu">
+    <p>instruments</p>
+    <p>experience</p>
+    <p>location</p>
+    <img class = "userPhoto" src = "img/defaultProf.png" alt="default profile image" style="width: 30%; height: 30%">
+    <p> username</p>
+    <p> Name</p>
+
+    <!--Like button-->
     <button>
       <img src = "img/check.png" alt="like button">
     </button>
   </div>
-</body>
 
+</body>
 </html>

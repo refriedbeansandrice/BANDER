@@ -1,0 +1,28 @@
+[debug] [2017-08-16T17:06:21.052Z] ----------------------------------------------------------------------
+[debug] [2017-08-16T17:06:21.052Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Girls Who Code\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-08-16T17:06:21.052Z] CLI Version:   3.9.2
+[debug] [2017-08-16T17:06:21.052Z] Platform:      win32
+[debug] [2017-08-16T17:06:21.052Z] Node Version:  v6.11.2
+[debug] [2017-08-16T17:06:21.052Z] Time:          Wed Aug 16 2017 10:06:21 GMT-0700 (Pacific Daylight Time)
+[debug] [2017-08-16T17:06:21.052Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-16T17:06:21.099Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-08-16T17:06:21.099Z] > authorizing via signed-in user
+[debug] [2017-08-16T17:06:21.115Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/banderfirebase  
+ Wed Aug 16 2017 10:06:21 GMT-0700 (Pacific Daylight Time)
+[debug] [2017-08-16T17:06:22.208Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-16T17:06:22.208Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/banderfirebase/tokens  
+ Wed Aug 16 2017 10:06:22 GMT-0700 (Pacific Daylight Time)
+[debug] [2017-08-16T17:06:22.646Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Girls Who Code\Desktop\bandrwebsite\bander'...
+[info] 
+[debug] [2017-08-16T17:06:22.677Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/banderfirebase  
+ Wed Aug 16 2017 10:06:22 GMT-0700 (Pacific Daylight Time)
+[debug] [2017-08-16T17:06:26.360Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-16T17:06:26.360Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/568834129618/clients/_:getWebAppConfig  
+ Wed Aug 16 2017 10:06:26 GMT-0700 (Pacific Daylight Time)
+[debug] [2017-08-16T17:06:26.767Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
