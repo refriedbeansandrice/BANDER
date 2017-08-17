@@ -3,29 +3,41 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="C:/Users/Girls Who Code/Desktop/sonjaBandr/BANDER/bander/www/css/createProfile.css">
-  <script src="C:/Users/Girls Who Code/Desktop/sonjaBandr/BANDER/bander/www/js/createProfileJS.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/createProfile.css">
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
-    <div class="sorry"> Profile Pic:<br>
-
-    <br>
-    <form>Name:<br>
-      <input type="text" id="name"><br>
-    </form>
-    <form>
-      Instruments:<br>
-      <input type="text" id="instruments">
-    </form>
-    <p>Select Gender:
+  <div class="sorry">
+    <p>Username: </p>
+    <input type="text" id="username"></input>
+    <p>Password: </p>
+    <input type="text" id="password"></input>
+    <p>Profile Pic:</p>
+    <img id="profilePic" src="img/defaultProf.png" height="200"><br>
+    <input type="file" id="photoFile"></input><br><br>
+    <p>Name:</p>
+      <input type="text" id="name"></input>
+      <p>Instruments:</p>
+      <select id="instruments">
+        <option value="guitar">guitar</option>
+        <option value="vocals">vocals</option>
+        <option value="bass">bass</option>
+        <option value="keyboard">keyboard</option>
+        <option value="drums">drums</option>
+        <option value="other">other (specify in about)</option></p>
+      </select>
+    <p>Select Gender:</p>
     <select id="gender">
       <option value="female">F</option>
       <option value="male">M</option>
-      <option value="uns">Unspecified</option></p>
+      <option value="uns">Unspecified</option>
     </select>
     <br><br>
-    <textarea id="about" rows="10" cols="30">Write a short 'about you' here!</textarea>
+    <textarea id="about" rows="10" cols="30">Write a short 'about you' here!</textarea><br>
+      <button onclick="uploadProfile()">Upload Profile</button>
     </div>
 </body>
 
