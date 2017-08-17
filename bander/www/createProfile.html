@@ -20,15 +20,15 @@
     <input type="file" id="photoFile"></input><br><br>
     <p>Name:</p>
       <input type="text" id="name"></input>
-      <p>Instruments:</p>
+    <!--  <p>Instruments:</p>
       <select id="instruments">
         <option value="guitar">guitar</option>
         <option value="vocals">vocals</option>
         <option value="bass">bass</option>
         <option value="keyboard">keyboard</option>
         <option value="drums">drums</option>
-        <option value="other">other (specify in about)</option></p>
-      </select>
+        <option value="other">other (specify in about)</option>
+      </select> -->
     <p>Select Gender:</p>
     <select id="gender">
       <option value="female">F</option>
@@ -37,7 +37,11 @@
     </select>
     <br><br>
     <textarea id="about" rows="10" cols="30">Write a short 'about you' here!</textarea><br>
-      <button onclick="uploadProfile()">Upload Profile</button>
+    <legend id="instruments"><p>Select Instruments:</p>
+        <input type="radio" id="guitar">guitar</input><br>
+        <input type="radio" id="vocals">vocals</input><br>
+        <input type="radio" id="killme">killme</input></legend><br><br>
+      <button onclick= "uploadProfile()">Upload Profile</button>
     </div>
 </body>
 

@@ -25,10 +25,28 @@ function uploadProfile(){
   var theName = document.getElementById("name").value;
   var Instruments = document.getElementById("instruments").value
   var whereToPutIt = database.ref("users/" + theUsername);
-  whereToPutIt.set({password : thePassword, about : theAbout});
+  var guitarValue = false;
+  var vocalsValue = false;
+  var killmeValue = false;
+  if (document.getElementById("guitar").clicked){
+    guitarValue = true;
+  } else{
+    guitarValue = false;
+  }
+  if(document.getElementById("vocals").clicked){
+    vocalsValue = true;
+  }else{
+    vocalsValue = false;
+  }
+  if(document.getElementById("killme").clicked){
+    killmeValue = true;
+  }else{
+    killmeValue = false;
+  }
+
+  whereToPutIt.set({password : thePassword, about : theAbout, name : theName, instruments : {guitar : guitarValue, vocals : vocalsValue, killme : killmeValue}});
   var whereToPutPicture = storageRef.child("users/" + theUsername + "/" + file.name);
   whereToPutPicture.put(file, metadata);
-
 }
 
 // Register event listener to file selector
@@ -57,6 +75,7 @@ function handleFileSelect(evt) {
   evt.stopPropagation();
   evt.preventDefault();
   file = evt.target.files[0];
+  // console.log(file)
 
   metadata = {
     'contentType': file.type
