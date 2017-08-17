@@ -1,3 +1,6 @@
+var file; // photo
+var metadata;
+
 var config = {
     apiKey: "AIzaSyDh2jRKkQi1KxZIzEdxNBZKVUE2ZcDCfSk",
     authDomain: "banderfirebase.firebaseapp.com",
@@ -14,12 +17,26 @@ var database = firebase.database();
 var storage = firebase.storage();
 var storageRef = storage.ref();
 
-function storeData(){
-  var key = document.getElementById('Username').value;
-  var val = document.getElementById('Password').value;
-  database.ref(key).set({theVal : val});
+
+function uploadProfile(){
+  var theUsername = document.getElementById("username").value;
+  var thePassword = document.getElementById("password").value;
+  var theAbout = document.getElementById("about").value;
+  var theName = document.getElementById("name").value;
+  var Instruments = document.getElementById("instruments").value
+  var whereToPutIt = database.ref("users/" + theUsername);
+  whereToPutIt.set({password : thePassword, about : theAbout});
+  var whereToPutPicture = storageRef.child("users/" + theUsername + "/" + file.name);
+  whereToPutPicture.put(file, metadata);
+
 }
 
+// Register event listener to file selector
+window.onload = function() {
+  document.getElementById('photoFile').addEventListener('change', handleFileSelect, false);
+}
+
+/*
 function loadData(){
   var key = document.getElementById('loadKey').value;
   database.ref(key).once('value').then(function(snapshot){
@@ -32,43 +49,29 @@ function loadData(){
     }
     document.getElementById('valueShown').innerHTML = toBeDisplayed;
   });
-}
+}*/
+
+
 
 function handleFileSelect(evt) {
   evt.stopPropagation();
   evt.preventDefault();
-  var file = evt.target.files[0];
-  var metadata = {
+  file = evt.target.files[0];
+
+  metadata = {
     'contentType': file.type
   };
   // how to get the filename, if you need it
   //var filename = file.name;
-  var user = document.getElementById('username').value;
-  // Push to child path.
-  storageRef.child('images/' + user).put(file, metadata).then(function(snapshot) {
-    var url = snapshot.downloadURL;
-    console.log('File available at', url);
-  }).catch(function(error) {
-    console.error('Upload failed:', error);
-  });
 }
 
 // NOTE: this will not work unless you configure CORS stuff
 // need to download gsutil and make json file allowing cross domain access
 // See instructions at https://firebase.google.com/docs/storage/web/download-files
-function downloadFile(){
-  var user = document.getElementById('loadUsername').value;
+/*function downloadFile(){
+  var user = document.getElementById('username').value;
   storageRef.child('images/' + user).getDownloadURL().then(function(url) {
   // `url` is the download URL for 'images/cat.jpg'
-
-  // This can be downloaded directly:
-  /*var xhr = new XMLHttpRequest();
-  xhr.responseType = 'blob';
-  xhr.onload = function(event) {
-    var blob = xhr.response;
-  };
-  xhr.open('GET', url);
-  xhr.send();*/
 
   // Or inserted into an <img> element:
   var img = document.getElementById('myimg');
@@ -76,5 +79,4 @@ function downloadFile(){
 }).catch(function(error) {
   // Handle any errors
 });
-}
-
+}*/

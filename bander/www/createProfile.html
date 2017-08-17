@@ -3,41 +3,42 @@
 <html>
 
 <head>
-<script src = "createProfileJS.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/createProfile.css">
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
-
-<!--  <form enctype="multipart/form-data" action="uploader.php" method="POST">
-  <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-  Choose a file to upload: <input name="uploadedfile" type="file" /><br />
-  <input type="submit" value="Upload File" />
-</form> -->
-
-Profile Pic:<br>
-<textarea id="imgName" name="pfp" rows="4" cols="30">
-copy paste your profile pic HTML here (sorry)
-</textarea>
-
-<img id="profileImg" src="help" height="200">
-
-<form>
-  Name and Last name:<br>
-  <input type="text" name="user"><br>
-</form>
-<form>
-  Intruments:<br>
-  <input type="text" name="pass">
-</form>
-Select Gender:<br>
-<select name="gender">
-  <option value="female">F</option>
-  <option value="male">M</option>
-  <option value="n/a">Unspecified</option>
-</select>
-<br><br><textarea name="about" rows="10" cols="30">
-Write a short 'about you' here!
-</textarea>
+  <div class="sorry">
+    <p>Username: </p>
+    <input type="text" id="username"></input>
+    <p>Password: </p>
+    <input type="text" id="password"></input>
+    <p>Profile Pic:</p>
+    <img id="profilePic" src="img/defaultProf.png" height="200"><br>
+    <input type="file" id="photoFile"></input><br><br>
+    <p>Name:</p>
+      <input type="text" id="name"></input>
+      <p>Instruments:</p>
+      <select id="instruments">
+        <option value="guitar">guitar</option>
+        <option value="vocals">vocals</option>
+        <option value="bass">bass</option>
+        <option value="keyboard">keyboard</option>
+        <option value="drums">drums</option>
+        <option value="other">other (specify in about)</option></p>
+      </select>
+    <p>Select Gender:</p>
+    <select id="gender">
+      <option value="female">F</option>
+      <option value="male">M</option>
+      <option value="uns">Unspecified</option>
+    </select>
+    <br><br>
+    <textarea id="about" rows="10" cols="30">Write a short 'about you' here!</textarea><br>
+      <button onclick="uploadProfile()">Upload Profile</button>
+    </div>
 </body>
 
 </html>
