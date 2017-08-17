@@ -47,7 +47,7 @@ function loadData(){
     } else {
       toBeDisplayed = "Sorry, couldn't find that key :(";
     }
-    document.getElementById('loadValue').innerHTML = toBeDisplayed;
+    document.getElementById('valueShown').innerHTML = toBeDisplayed;
   });
 }*/
 
