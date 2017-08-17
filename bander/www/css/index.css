@@ -1,10 +1,13 @@
 h1 {
     font-size: 400%;
-    color: cadetblue;
+    color: white;
     text-align: center;
+    letter-spacing: 20px;
+    /* font-family: 'Monoton', cursive; */
 }
 h2 {
     text-align: center;
+    color: white;
     font-size: 300%;
 }
 
@@ -17,16 +20,25 @@ input {
 
 p {
     text-align: center;
+    font-size:180%;
+    color: white;
 }
 
 button {
+
+    width: 10%;
+    background-color: white;
+    border: none;
+    padding: 15px 25px;
+    text-decoration: none;
     display: block;
+    font-size: 100%;
     margin: auto;
+    cursor: pointer;
     text-align: center;
 }
 
 body {
-    background-image: url("andre-benz.jpg");
-
-
+    background-image: url("../img/andre-benz.jpg");
+    background-size: 100%;
 }

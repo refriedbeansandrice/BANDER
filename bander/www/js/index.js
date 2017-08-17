@@ -31,6 +31,10 @@ function uploadProfile(){
 
 }
 
+function sendInfotoAbigail(){
+
+}
+
 // Register event listener to file selector
 window.onload = function() {
   document.getElementById('photoFile').addEventListener('change', handleFileSelect, false);

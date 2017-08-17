@@ -19,9 +19,9 @@
 
     <title>Bander Log in</title>
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet"> 
+    <script type="text/javascript" src="js/index.js"></script> 
     <link rel="stylesheet" type="text/css" href="css/index.css" >
+    <!-- <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet"> -->
 
 
 </head>
@@ -46,10 +46,11 @@
     <p>Password:</p>
     <input type="text" id="loadValue"></input>
     <br><br>
-    <button onclick="loadData()">Login</button>
+    <button onclick="sendInfotoAbigail()">
+        <a href="yourProfile.html">Login</a>
+    </button>
     <br>
-    <p id="valueShown"><!-- this will lead to that person's profile who logged in --></p>
-
+    <!--<p id="valueShown">this will lead to that person's profile who logged in </p> -->
     <button>
         <a href = "createProfile.html">Sign Up</a>
     </button>
