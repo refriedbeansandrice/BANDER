@@ -23,39 +23,43 @@ function uploadProfile(){
   var thePassword = document.getElementById("password").value;
   var theAbout = document.getElementById("about").value;
   var theName = document.getElementById("name").value;
-  var Instruments = document.getElementById("instruments").value
+  var Instruments = document.getElementById("instruments").value;
+  var theGender = document.getElementById("gender").value;
+  var skillLevel = document.getElementById("skill").value;
+  var theAge = document.getElementById("age").value;
+  //var thePhoto document.getElementById("profilePic").value;
   var whereToPutIt = database.ref("users/" + theUsername);
-  var guitarValue = false;
-  var vocalsValue = false;
-  var killmeValue = false;
-  if (document.getElementById("guitar").clicked){
+  var guitarValue;
+  var vocalsValue;
+  //var value1 = document.getElementById("guitar").value;
+//  console.log(value1);
+//  var value2 = document.getElementById("vocals").value;
+//  console.log(value2);
+  if (document.getElementById("guitar").checked){
     guitarValue = true;
   } else{
     guitarValue = false;
   }
-  if(document.getElementById("vocals").clicked){
+  if(document.getElementById("vocals").checked){
     vocalsValue = true;
-  } else{
+  } else {
     vocalsValue = false;
   }
-  if(document.getElementById("killme").clicked){
-    killmeValue = true;
-  } else{
-    killmeValue = false;
+  if(theUsername != "") {
+    whereToPutIt.set({password : thePassword, about : theAbout, name : theName, age : theAge, skill : skillLevel, gender : theGender, instruments : {guitar : guitarValue, vocals : vocalsValue}}); //  photo : thePhoto,
+    var whereToPutPicture = storageRef.child("users/" + theUsername + "/" + file.name);
+    whereToPutPicture.put(file, metadata);
+  } else {
+    console.log("U SUCK U SUCK U SUCUK")
+    document.getElementById("error").innerHTML = "enter a username pls"
   }
-
-  whereToPutIt.set({password : thePassword, about : theAbout, name : theName, instruments : {guitar : guitarValue, vocals : vocalsValue, killme : killmeValue}});
-  var whereToPutPicture = storageRef.child("users/" + theUsername + "/" + file.name);
-  whereToPutPicture.put(file, metadata);
 }
 
-function sendInfotoAbigail(){
-
-}
 
 // Register event listener to file selector
 window.onload = function() {
   document.getElementById('photoFile').addEventListener('change', handleFileSelect, false);
+
 }
 
 /*
@@ -86,6 +90,16 @@ function handleFileSelect(evt) {
   };
   // how to get the filename, if you need it
   //var filename = file.name;
+  var img = document.getElementById("profilePic");
+  var myReader = new FileReader();
+  myReader.onloadend = function(){
+    img.src = myReader.result;
+  }
+  myReader.readAsDataURL(file);
+}
+
+function changeSrc(){
+
 }
 
 // NOTE: this will not work unless you configure CORS stuff

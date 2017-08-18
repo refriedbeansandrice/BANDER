@@ -11,37 +11,78 @@
 
 <body>
   <div class="sorry">
-    <p>Username: </p>
-    <input type="text" id="username"></input>
-    <p>Password: </p>
-    <input type="text" id="password"></input>
-    <p>Profile Pic:</p>
-    <img id="profilePic" src="img/defaultProf.png" height="200"><br>
-    <input type="file" id="photoFile"></input><br><br>
-    <p>Name:</p>
-      <input type="text" id="name"></input>
-    <!--  <p>Instruments:</p>
-      <select id="instruments">
-        <option value="guitar">guitar</option>
-        <option value="vocals">vocals</option>
-        <option value="bass">bass</option>
-        <option value="keyboard">keyboard</option>
-        <option value="drums">drums</option>
-        <option value="other">other (specify in about)</option>
-      </select> -->
-    <p>Select Gender:</p>
-    <select id="gender">
-      <option value="female">F</option>
-      <option value="male">M</option>
-      <option value="uns">Unspecified</option>
-    </select>
-    <br><br>
-    <textarea id="about" rows="10" cols="30">Write a short 'about you' here!</textarea><br>
-    <legend id="instruments"><p>Select Instruments:</p>
-        <input type="radio" id="guitar">guitar</input><br>
-        <input type="radio" id="vocals">vocals</input><br>
-        <input type="radio" id="killme">killme</input></legend><br><br>
+    <h1>Welcome to Musical Soulmates!</h1>
+    <h2>Create a profile:</h2>
+
+      <!-- user + pass -->
+      <p>Username: </p>
+      <input type="text" id="username"></input>
+      <p id = "error"></p>
+      <p>Password: </p>
+      <input type="text" id="password"></input>
+
+      <!-- pfp -->
+      <p>Profile Pic:</p>
+      <img id="profilePic" src="img/defaultProf.png" height="200"></img><br>
+      <input type="file" id="photoFile"></input><br>
+
+        <!-- name -->
+      <p>Name:</p>
+        <input type="text" id="name"></input>
+
+      <!-- email -->
+      <p>Email:</p>
+      <input ="text" id="email" value="@gmail.com"></input><br>
+      <p>if you dont have a gmail in 2017, thats just childish.</p>
+
+
+      <!-- location -->
+      <p>Location:<p>
+        <select id="location">
+          <option>eastside</option>
+          <option>kitsap</option>
+          <option>olympia</option>
+          <option>seattle</option>
+          <option>snohomish</option>
+          <option>south king</option>
+          <option>tacoma</option>
+        </select><br>
+
+        <!-- gender -->
+      <p>Select Gender:</p>
+      <select id="gender">
+        <option value="female">F</option>
+        <option value="male">M</option>
+        <option value="uns">Unspecified</option>
+      </select>
+      <br>
+
+      <!-- age -->
+      <p>Age:</p>
+        <input type="number" id="age"></input><br>
+
+      <!-- skill lvl -->
+      <p>Skill level:</p>
+      <select id="skill">
+        <option id="beginner">Beginner (<2 years)</option>
+        <option id="intermediate">Intermediate (2-6 years)</option>
+        <option id="expert">Expert(6+ years)</option>
+        <option id="neverPlayed">Have never played music, are interested in learning</option>
+      </select><br><br>
+
+      <!-- about -->
+      <textarea id="about" rows="10" cols="30" placeholder="Write a short 'about you' here!"></textarea><br>
+
+      <!-- instruments -->
+      <p>Instruments:</p>
+        <form id="instruments">
+          <input type="checkbox" id="guitar">guitar</input><br>
+          <input type="checkbox" id="vocals">vocals</input>
+        </form></div><br>
+
+      <!-- UPLOAD BUTTON -->
       <button onclick= "uploadProfile()">Upload Profile</button>
+
     </div>
 </body>
 
