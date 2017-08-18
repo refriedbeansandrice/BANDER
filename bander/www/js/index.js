@@ -35,12 +35,12 @@ function uploadProfile(){
   }
   if(document.getElementById("vocals").clicked){
     vocalsValue = true;
-  }else{
+  } else{
     vocalsValue = false;
   }
   if(document.getElementById("killme").clicked){
     killmeValue = true;
-  }else{
+  } else{
     killmeValue = false;
   }
 
