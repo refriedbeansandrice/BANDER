@@ -37,7 +37,7 @@ function loadingPage(){
 
 
 //Loads data on to profile 
-/*function loadData(){
+function loadData(){
   var key = document.getElementById('loadKey').value;
   database.ref(key).once('value').then(function(snapshot){
     var json = snapshot.val();
@@ -49,4 +49,4 @@ function loadingPage(){
     }
     document.getElementById('loadValue').innerHTML = toBeDisplayed;
   });
-}*/
+}
