@@ -1,6 +1,7 @@
 body {
   background-image: url("C:/Users/Girls Who Code/Desktop/sonjaBandr/BANDER/bander/www/img/headphones.jpg");
-  background-size: 100%
+  background-size: 100%;
+  background-attachment: fixed;
   /*background-repeat: no-repeat;
   background-color: gray;*/
 }
@@ -8,4 +9,18 @@ body {
 .sorry {
   color: white;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+}
+
+h1, h2 {
+  font-style: italic;
+}
+
+#profilePic {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
 }
