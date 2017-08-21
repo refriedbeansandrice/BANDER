@@ -4,17 +4,88 @@ body {
   background-attachment: fixed;
   /*background-repeat: no-repeat;
   background-color: gray;*/
+  color: black;
+}
+
+input {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 7px 17px;
+}
+
+input.chooseFile {
+  display: none;
+}
+
+select {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 7px 17px;
+}
+
+form {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 20px;
+  padding: 7px 17px;
+
+}
+
+textarea {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .sorry {
-  color: white;
+  color: black;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   text-align: center;
 }
 
-h1, h2 {
-  font-style: italic;
+div {
+  background-color: rgba(255, 255, 255, 0.3);
+  width:850px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
 }
+
+p {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: black;
+  font-size: 140%;
+}
+
+h1 {
+  font-size: 400%;
+  font-family: 'Monoton', cursive;
+  letter-spacing: 20px;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+body { /*centering and perfecting the background image*/
+  background-color: lightgrey;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: url(../img/orangeband.jpg);
+}
+
+button {
+  background-color: #202020;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 
 #profilePic {
   display: inline-block;

@@ -7,12 +7,14 @@
   <link rel="stylesheet" type="text/css" href="css/createProfile.css">
   <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
   <script src="js/createProfile.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 </head>
 
 <body>
   <div class="sorry">
-    <h1>welcome to musical soulmates</h1>
-    <h2>create a profile:</h2>
+    <h1>BANDER</h1>
+    <h2> Welcome! </h2>
+    <h2>Create a Profile:</h2>
 
       <!-- user + pass -->
       <p>Username: </p>
@@ -24,7 +26,10 @@
       <!-- pfp -->
       <p>Profile Pic:</p>
       <img id="profilePic" src="img/defaultProf.png" height="200"></img><br>
-      <input type="file" id="photoFile"></input><br>
+      <button>
+        Choose File
+        <input type="file" class="chooseFile" id="photoFile"></input><br>
+      </button>
 
         <!-- name -->
       <p>Name:</p>
