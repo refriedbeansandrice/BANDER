@@ -1,9 +1,9 @@
-h1 {
+#TitleBander {
     font-size: 400%;
     color: white;
     text-align: center;
     letter-spacing: 20px;
-     font-family: 'Monoton', cursive;
+    font-family: 'Monoton', cursive;
 }
 h2 {
     text-align: center;
