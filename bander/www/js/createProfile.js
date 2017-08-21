@@ -19,6 +19,7 @@ var storageRef = storage.ref();
 
 
 function uploadProfile(){
+  console.log('hereitis');
   var theUsername = document.getElementById("username").value;
   var thePassword = document.getElementById("password").value;
   var theAbout = document.getElementById("about").value;
@@ -27,6 +28,7 @@ function uploadProfile(){
   var theGender = document.getElementById("gender").value;
   var skillLevel = document.getElementById("skill").value;
   var theAge = document.getElementById("age").value;
+  var theLocation = document.getElementById("location").value;
   //var thePhoto document.getElementById("profilePic").value;
   var whereToPutIt = database.ref("users/" + theUsername);
   var guitarValue;
@@ -46,7 +48,18 @@ function uploadProfile(){
     vocalsValue = false;
   }
   if(theUsername != "") {
-    whereToPutIt.set({password : thePassword, about : theAbout, name : theName, age : theAge, skill : skillLevel, gender : theGender, instruments : {guitar : guitarValue, vocals : vocalsValue}}); //  photo : thePhoto,
+    whereToPutIt.set({
+    password : thePassword, 
+    about : theAbout, 
+    name : theName, 
+    age : theAge, 
+    skill : skillLevel, 
+    gender : theGender, 
+    location : theLocation,
+    instruments : {
+      guitar : guitarValue, 
+      vocals : vocalsValue
+    }}); //  photo : thePhoto,
     var whereToPutPicture = storageRef.child("users/" + theUsername + "/" + file.name);
     whereToPutPicture.put(file, metadata);
   } else {
