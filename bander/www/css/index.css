@@ -51,6 +51,7 @@ body {
     background-image: url("../img/bluetime.jpg");
     background-size: 125%;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-attachment: fixed;
 }
 div {
     background-color: rgba(255, 255, 255, 0.3);

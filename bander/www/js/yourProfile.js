@@ -10,12 +10,14 @@
   firebase.initializeApp(config);
 
   var database = firebase.database();
+  var storage = firebase.storage();
+  var storageRef = storage.ref();
 
 function loadingPage(){
   // get the info from rita
   var user = sessionStorage.username;
   console.log(user);
-  database.ref("users/" + user).once('value').then(function(snapshot){ //gets info from database depending on user
+  database.ref("users/" + user + "/").once('value').then(function(snapshot){ //gets info from database depending on user
     var userinfo = snapshot.val(); 
     console.log(userinfo);
 
@@ -31,11 +33,15 @@ function loadingPage(){
     document.getElementById("location").innerHTML = "Location: " + userinfo.location;
     document.getElementById("username").innerHTML = user;
     document.getElementById("name").innerHTML = userinfo.name;
-    document.getElementById("about").innerHTML = "About: " + userinfo.about;    
+    document.getElementById("about").innerHTML = "About: " + userinfo.about; 
+    storageRef.child('users/' + user + "/" + userinfo.picture).getDownloadURL().then(function(url) {
+      var img = document.getElementById("userPhoto");
+      img.src = url; });
+
   });
 }
 
-
+ 
 //Loads data on to profile 
 function loadData(){
   var key = document.getElementById('loadKey').value;
