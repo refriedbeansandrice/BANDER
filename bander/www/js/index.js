@@ -19,7 +19,6 @@ var storageRef = storage.ref();
 
 
 function uploadProfile(){
-  console.log('hereitis');
   var theUsername = document.getElementById("username").value;
   var thePassword = document.getElementById("password").value;
   var theAbout = document.getElementById("about").value;
@@ -28,14 +27,10 @@ function uploadProfile(){
   var theGender = document.getElementById("gender").value;
   var skillLevel = document.getElementById("skill").value;
   var theAge = document.getElementById("age").value;
-  var theLocation = document.getElementById("location").value;
   //var thePhoto document.getElementById("profilePic").value;
   var whereToPutIt = database.ref("users/" + theUsername);
   var guitarValue;
   var vocalsValue;
-  var drumsValue;
-  var pianoValue;
-  var ukuleleValue;
   //var value1 = document.getElementById("guitar").value;
 //  console.log(value1);
 //  var value2 = document.getElementById("vocals").value;
@@ -50,39 +45,8 @@ function uploadProfile(){
   } else {
     vocalsValue = false;
   }
-  if(document.getElementById("drums").checked){
-    drumsValue = true;
-  } else {
-    drumsValue = false;
-  }
-  if(document.getElementById("piano").checked){
-    pianoValue = true;
-  } else {
-    pianoValue = false;
-  }
-  if(document.getElementById("ukulele").checked){
-    ukuleleValue = true;
-  } else {
-    ukuleleValue = false;
-  }
-
   if(theUsername != "") {
-    whereToPutIt.set({
-    password : thePassword,
-    about : theAbout,
-    name : theName,
-    age : theAge,
-    skill : skillLevel,
-    gender : theGender,
-    location : theLocation,
-    picture : file.name,
-    instruments : {
-      guitar : guitarValue,
-      vocals : vocalsValue,
-      drums : drumsValue,
-      piano : pianoValue,
-      ukulele : ukuleleValue
-    }});
+    whereToPutIt.set({password : thePassword, about : theAbout, name : theName, age : theAge, skill : skillLevel, gender : theGender, instruments : {guitar : guitarValue, vocals : vocalsValue}}); //  photo : thePhoto,
     var whereToPutPicture = storageRef.child("users/" + theUsername + "/" + file.name);
     whereToPutPicture.put(file, metadata);
   } else {

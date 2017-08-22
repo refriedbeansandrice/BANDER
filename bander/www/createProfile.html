@@ -46,13 +46,13 @@
       <!-- location -->
       <p>Location:<p>
         <select id="location">
-          <option>eastside</option>
-          <option>kitsap</option>
-          <option>olympia</option>
-          <option>seattle</option>
-          <option>snohomish</option>
-          <option>south king</option>
-          <option>tacoma</option>
+          <option>Eastside</option>
+          <option>Kitsap</option>
+          <option>Olympia</option>
+          <option>Seattle</option>
+          <option>Snohomish</option>
+          <option>South King</option>
+          <option>Tacoma</option>
         </select><br>
 
         <!-- gender -->
@@ -71,25 +71,32 @@
       <!-- skill lvl -->
       <p>Skill level:</p>
       <select id="skill">
-        <option id="beginner">Beginner (<2 years)</option>
+        <option id="beginner">Novice (<2 years)</option>
         <option id="intermediate">Intermediate (2-6 years)</option>
         <option id="expert">Expert(6+ years)</option>
-        <option id="neverPlayed">Have never played music, are interested in learning</option>
+        <option id="neverPlayed">Complete beginner</option>
       </select><br><br>
 
       <!-- about -->
-      <textarea id="about" rows="10" cols="30" placeholder="Write a short 'about you' here!"></textarea><br>
+      <textarea id="about" rows="10" cols="50" placeholder="Write a short 'about you' here!"></textarea><br>
 
       <!-- instruments -->
       <p>Instruments:</p>
         <form id="instruments">
-          <input type="checkbox" id="guitar">guitar</input><br>
-          <input type="checkbox" id="vocals">vocals</input>
+          <input type="checkbox" id="guitar">Guitar</input>
+          <input type="checkbox" id="vocals">Vocals</input>
+          <input type="checkbox" id="drums">Drums</input>
+          <input type="checkbox" id="piano">Piano</input>
+          <input type="checkbox" id="ukulele">Ukulele</input>
         </form><br>
 
-      <!-- UPLOAD BUTTON -->
-      <button onclick= "uploadProfile()">Upload Profile</button>
+      <!-- UPLOAD BUTTON
+      <a href = "banderm.html">
+      <button onclick= "uploadProfile()">
+          Upload Profile
+      </button></a>-->
 
+      <button onclick="uploadProfile()">click this for instant death</button>
     </div>
 </body>
 
