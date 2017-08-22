@@ -1,6 +1,6 @@
 h1 {
     font-size: 400%;
-    color: white;
+    color: #202020;
     text-align: center;
     letter-spacing: 20px;
     font-family: 'Monoton', cursive;
@@ -25,7 +25,7 @@ input {
 p {
     text-align: center;
     font-size:180%;
-    color: white;
+    color: #202020;
 }
 
 button {
