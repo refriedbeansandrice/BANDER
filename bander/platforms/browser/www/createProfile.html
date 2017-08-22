@@ -3,41 +3,101 @@
 <html>
 
 <head>
-<script src = "createProfileJS.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/createProfile.css">
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script src="js/createProfile.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 </head>
 
 <body>
+  <div class="sorry">
+    <h1>BANDER</h1>
+    <h2> Welcome! </h2>
+    <h2>Create a Profile:</h2>
 
-<!--  <form enctype="multipart/form-data" action="uploader.php" method="POST">
-  <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
-  Choose a file to upload: <input name="uploadedfile" type="file" /><br />
-  <input type="submit" value="Upload File" />
-</form> -->
+      <!-- user + pass -->
+      <p>Username: </p>
+      <input type="text" id="username"></input>
+      <p id = "error"></p>
+      <p>Password: </p>
+      <input type="text" id="password"></input>
 
-Profile Pic:<br>
-<textarea id="imgName" name="pfp" rows="4" cols="30">
-copy paste your profile pic HTML here (sorry)
-</textarea>
+      <!-- pfp -->
+      <p>Profile Pic:</p>
+      <img id="profilePic" src="img/defaultProf.png" height="200"></img><br>
+      <label>
+        Choose File
+        <input type="file" class="chooseFile" id="photoFile"></input>
+      </label>
 
-<img id="profileImg" src="help" height="200">
+      <br>
 
-<form>
-  Name and Last name:<br>
-  <input type="text" name="user"><br>
-</form>
-<form>
-  Intruments:<br>
-  <input type="text" name="pass">
-</form>
-Select Gender:<br>
-<select name="gender">
-  <option value="female">F</option>
-  <option value="male">M</option>
-  <option value="n/a">Unspecified</option>
-</select>
-<br><br><textarea name="about" rows="10" cols="30">
-Write a short 'about you' here!
-</textarea>
+        <!-- name -->
+      <p>Name:</p>
+        <input type="text" id="name"></input>
+
+      <!-- email -->
+      <p>Email:</p>
+      <input ="text" id="email" value="@gmail.com"></input><br>
+      <p>if you dont have a gmail in 2017, thats just childish.</p>
+
+
+      <!-- location -->
+      <p>Location:<p>
+        <select id="location">
+          <option>Eastside</option>
+          <option>Kitsap</option>
+          <option>Olympia</option>
+          <option>Seattle</option>
+          <option>Snohomish</option>
+          <option>South King</option>
+          <option>Tacoma</option>
+        </select><br>
+
+        <!-- gender -->
+      <p>Select Gender:</p>
+      <select id="gender">
+        <option value="female">F</option>
+        <option value="male">M</option>
+        <option value="uns">Unspecified</option>
+      </select>
+      <br>
+
+      <!-- age -->
+      <p>Age:</p>
+        <input type="number" id="age"></input><br>
+
+      <!-- skill lvl -->
+      <p>Skill level:</p>
+      <select id="skill">
+        <option id="beginner">Novice (<2 years)</option>
+        <option id="intermediate">Intermediate (2-6 years)</option>
+        <option id="expert">Expert(6+ years)</option>
+        <option id="neverPlayed">Complete beginner</option>
+      </select><br><br>
+
+      <!-- about -->
+      <textarea id="about" rows="10" cols="50" placeholder="Write a short 'about you' here!"></textarea><br>
+
+      <!-- instruments -->
+      <p>Instruments:</p>
+        <form id="instruments">
+          <input type="checkbox" id="guitar">Guitar</input>
+          <input type="checkbox" id="vocals">Vocals</input>
+          <input type="checkbox" id="drums">Drums</input>
+          <input type="checkbox" id="piano">Piano</input>
+          <input type="checkbox" id="ukulele">Ukulele</input>
+        </form><br>
+
+      <!-- UPLOAD BUTTON
+      <a href = "banderm.html">
+      <button onclick= "uploadProfile()">
+          Upload Profile
+      </button></a>-->
+
+      <button onclick="uploadProfile()">click this for instant death</button>
+    </div>
 </body>
 
 </html>

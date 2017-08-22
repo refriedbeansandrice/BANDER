@@ -33,6 +33,7 @@ function loadingPage(){
     document.getElementById("location").innerHTML = "Location: " + userinfo.location;
     document.getElementById("username").innerHTML = user;
     document.getElementById("name").innerHTML = userinfo.name;
+    document.getElementById("gender").innerHTML = userinfo.gender;
     document.getElementById("about").innerHTML = "About: " + userinfo.about; 
     storageRef.child('users/' + user + "/" + userinfo.picture).getDownloadURL().then(function(url) {
       var img = document.getElementById("userPhoto");

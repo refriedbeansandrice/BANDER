@@ -1,27 +1,27 @@
-button{
-  border-radius: 50%;
-  color: white;
-  width: 15%;
-  padding: 10% 10%;
+/*"body" of page*/
+#not-menu{
+  transition: margin-left .5s;
+  padding: 0%;
   text-align: center;
 }
 
-div{
-  text-align: center;
-}
-
-.menu{
-}
-
+/*user photo*/
 .userPhoto{
   display: block;
   margin: auto;
 }
 
-p{
-  text-align: center;
+/*like button*/
+button{
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  border: 2px solid black;
 }
 
-h1{
-  text-align: left;
+/*check mark icon*/
+/*CHANGE SIZE TO PERCENT*/
+img{
+  height: 50px;
+  width: 50px;
 }

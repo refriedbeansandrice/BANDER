@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--tab title-->
+  <title>Your Profile</title>
+
+  <!--importing js and css files-->
+  <!--<script src="js/pullMenu.js"></script>-->
+  <link rel = "stylesheet" type = "text/css" href = "css/pullMenu.css">
+  <link rel = "stylesheet" type = "text/css" href = "css/browseFeature.css">
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src = "js/yourProfile.js" > </script>
+</head>
+
+<body onload="loadingPage()">
+  <!--SIDENAV MENU-->
+  <!--Sidenav Menu Links-->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="browseFeature.html">Browse</a>
+    <a href="yourProfile.html">Your Profile</a>
+    <a href="savedProfile.html">Saved Profiles</a>
+    <a href="index.html">Log Out</a>
+  </div>
+
+  <!--Sidenav Menu Hamburger Icon-->
+  <a class = "box-shadow-menu" onclick="openNav()"></a>
+
+  <!--NOT MENU PAGE CONTENT-->
+  <div id = "not-menu">
+    <!--Profile content-->
+    <p id = "instruments">Instrument list</p>
+    <p id="experience"></p>
+    <p id="location"></p>
+    <img id = "userPhoto" src = "img/defaultProf.png" alt="default profile image" style="width: 30%; height: 30%">
+    <p id="username"></p>
+    <h1 id="name">The person's name</h1>
+    <p id="about"></p> <!--in browse feature take this out-->
+
+    <!--Like button
+    <button>
+      <img src = "img/check.png" alt="like button"> NOTE: in browse feature add back in
+    </button>-->
+  </div>
+</body>
+
+</html>
