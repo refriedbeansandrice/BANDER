@@ -30,9 +30,12 @@ h2 { /*styling for the header "Search Bander"*/
 
 /*"body" of page*/
 #not-menu{
-  transition: margin-left .5s;
-  padding: 0%;
+  background-color: lightgrey;
+  background-repeat: no-repeat;
   text-align: center;
+  background-image: url(../img/browseImg.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 /*user photo*/

@@ -2,51 +2,34 @@
 <html>
 <head>
   <!--tab title-->
-  <title>Browse Feature</title>
+  <title>Browse Profiles</title>
 
   <!--importing js and css files-->
   <script src="js/pullMenu.js"></script>
   <link rel = "stylesheet" type = "text/css" href = "css/pullMenu.css">
   <link rel = "stylesheet" type = "text/css" href = "css/browseFeature.css">
-  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <script src="js/browseFeature.js"></script>
 </head>
 
-<!--SIDENAV MENU-->
-<!--Sidenav Menu Links-->
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="browseFeature.html">Browse</a>
-    <a href="yourProfile.html">Your Profile</a>
-    <a href="savedProfile.html">Saved Profiles</a>
-    <a href="index.html">Log Out</a>
+<body onload = "addProfsToPage()">
+  <!--SIDENAV MENU-->
+  <!--Sidenav Menu Links-->
+  <div class= "topnav" id="myTopNav">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="browseFeature.html">Browse</a>
+      <a href="yourProfile.html">Your Profile</a>
+      <a href="savedProfile.html">Saved Profiles</a>
+      <a href="index.html">Log Out</a>
+    </div>
+
+    <!--Sidenav Menu Hamburger Icon-->
+    <a class = "box-shadow-menu" onclick="openNav()"></a>
   </div>
 
-  <!--Sidenav Menu Hamburger Icon-->
-  <a class = "box-shadow-menu" onclick="openNav()"></a>
-
-<body>
-  <div class="clearBar">
-    <h1> BANDER </h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!--NOT MENU PAGE CONTENT-->
-    <div id = "not-menu">
-    </div>
- </div>
+  <!--NOT MENU PAGE CONTENT-->
+  <div id = "notMenu">
+  </div>
 
 </body>
 </html>
