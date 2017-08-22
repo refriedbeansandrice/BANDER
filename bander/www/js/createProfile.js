@@ -83,8 +83,13 @@ function uploadProfile(){
       piano : pianoValue,
       ukulele : ukuleleValue
     }});
+    console.log("about to store picture");
     var whereToPutPicture = storageRef.child("users/" + theUsername + "/" + file.name);
-    whereToPutPicture.put(file, metadata);
+    whereToPutPicture.put(file, metadata).then(function(snapshot) {
+    var url = snapshot.downloadURL;
+    console.log('File available at', url);
+    window.location.href="banderm.html";
+  });
   } else {
     console.log("U SUCK U SUCK U SUCUK")
     document.getElementById("error").innerHTML = "enter a username pls"
