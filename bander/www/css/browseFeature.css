@@ -6,17 +6,21 @@ body {
   background-attachment: fixed;
 }
 
-div.clearBar {
-  background-color: rgba(255, 255, 255, 0.4);
+#clearBar {
+   background-color: rgba(255, 255, 255, 0.4);
   width:850px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 15px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 100%;
 }
 
+
+
 h1 {
-  font-size: 400%;
+  font-size: 350%;
   font-family: 'Monoton', cursive;
   letter-spacing: 20px;
 }
@@ -30,7 +34,12 @@ h2 { /*styling for the header "Search Bander"*/
 
 /*"body" of page*/
 #not-menu{
-
+  background-color: rgba(255, 255, 255, 0.4);
+  width:850px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
 }
 
 /*user photo*/

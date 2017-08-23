@@ -172,7 +172,7 @@ function addProfsToPage(){
       sessionStorage.setItem("otherUser", chosenUsername);
       window.location.href="otherProfile.html";
     }
-    var notMenu = document.getElementById("notMenu");
+    var notMenu = document.getElementById("clearBar");
     notMenu.appendChild(profile);
   }
 });
