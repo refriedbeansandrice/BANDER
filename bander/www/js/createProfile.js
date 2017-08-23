@@ -23,6 +23,7 @@ function uploadProfile(){
   var theUsername = document.getElementById("username").value;
   var thePassword = document.getElementById("password").value;
   var theAbout = document.getElementById("about").value;
+  var theEmail = document.getElementById("email").value;
   var theName = document.getElementById("name").value;
   var Instruments = document.getElementById("instruments").value;
   var theGender = document.getElementById("gender").value;
@@ -76,6 +77,7 @@ function uploadProfile(){
     gender : theGender,
     location : theLocation,
     picture : file.name,
+    email : theEmail,
     instruments : {
       Guitar : guitarValue,
       Vocals : vocalsValue,

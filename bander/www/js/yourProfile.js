@@ -18,7 +18,7 @@ function loadingPage(){
   var user = sessionStorage.username;
   console.log(user);
   database.ref("users/" + user + "/").once('value').then(function(snapshot){ //gets info from database depending on user
-    var userinfo = snapshot.val(); 
+    var userinfo = snapshot.val();
     console.log(userinfo);
 
     var instrumentsInfo = "Instruments: ";
@@ -28,13 +28,15 @@ function loadingPage(){
       }
      }
     instrumentsInfo = instrumentsInfo.substring(0, instrumentsInfo.length - 2);
-    document.getElementById("instruments").innerHTML = instrumentsInfo; 
+    document.getElementById("instruments").innerHTML = instrumentsInfo;
     document.getElementById("experience").innerHTML = "Experience: " + userinfo.skill;
     document.getElementById("location").innerHTML = "Location: " + userinfo.location;
-    document.getElementById("username").innerHTML = user;
-    document.getElementById("name").innerHTML = userinfo.name;
+    document.getElementById("username").innerHTML = "@" + user;
+    document.getElementById("email").innerHTML = "Email: " + userinfo.email;
+    console.log(userinfo.name);
+    document.getElementById("theName").innerHTML = userinfo.name;
     document.getElementById("gender").innerHTML = userinfo.gender;
-    document.getElementById("about").innerHTML = "About: " + userinfo.about; 
+    document.getElementById("about").innerHTML = "About: " + userinfo.about;
     storageRef.child('users/' + user + "/" + userinfo.picture).getDownloadURL().then(function(url) {
       var img = document.getElementById("userPhoto");
       img.src = url; });
@@ -42,8 +44,8 @@ function loadingPage(){
   });
 }
 
- 
-//Loads data on to profile 
+
+//Loads data on to profile
 function loadData(){
   var key = document.getElementById('loadKey').value;
   database.ref(key).once('value').then(function(snapshot){
