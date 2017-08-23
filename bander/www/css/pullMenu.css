@@ -19,7 +19,8 @@
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 /*Sidenav Menu Close Button*/
@@ -45,7 +46,7 @@
   top: 0.5em;
   width: 3em;
   height: 0.5em;
-  background: black;
+  background: rgba(255, 255, 255, 0.3);
   box-shadow:
     0 1em 0 0 black,
     0 2em 0 0 black;
