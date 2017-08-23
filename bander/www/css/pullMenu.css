@@ -33,7 +33,7 @@
 
 /*Sidenav Menu Hamburger Icon Position*/
 .box-shadow-menu{
-  position: relative;
+  position: static;
   padding-left: 1.25em;
 }
 
@@ -43,12 +43,12 @@
   position: absolute;
   left: 0.5em;
   top: 0.5em;
-  width: 1em;
-  height: 0.15em;
+  width: 3em;
+  height: 0.5em;
   background: black;
   box-shadow:
-    0 0.25em 0 0 black,
-    0 0.5em 0 0 black;
+    0 1em 0 0 black,
+    0 2em 0 0 black;
 }
 /*topnav formatting*/
 .topnav {

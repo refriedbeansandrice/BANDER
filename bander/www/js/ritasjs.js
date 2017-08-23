@@ -13,7 +13,7 @@ var database = firebase.database();
 
 function sendInfotoAbigail(){
   sessionStorage.setItem("username", document.getElementById("loadKey").value);
-  window.location.href = "yourProfile.html";
+  window.location.href = "banderm.html";
 }
 
 /*
