@@ -32,13 +32,21 @@
     margin-left: 50px;
 }
 
-/*Sidenav Menu Hamburger Icon Position*/
+#threebars {
+  /*position: static;*/
+position: fixed;
+ top: 8px;
+ left: 16px;
+ font-size: 18px;
+}
+
+/*Sidenav Menu Hamburger Icon Position
 .box-shadow-menu{
   position: static;
   padding-left: 1.25em;
 }
 
-/*Sidenav Menu Hamburger Icon Bars*/
+/*Sidenav Menu Hamburger Icon Bars
 .box-shadow-menu:before{
   content: "";
   position: absolute;
@@ -51,7 +59,7 @@
     0 1em 0 0 black,
     0 2em 0 0 black;
 }
-/*topnav formatting*/
+/*topnav formatting
 .topnav {
   background-color: gray;
-}
+}*/
