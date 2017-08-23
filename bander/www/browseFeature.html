@@ -10,6 +10,7 @@
   <link rel = "stylesheet" type = "text/css" href = "css/browseFeature.css">
   <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
   <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script src="js/browseFeature.js"></script>
 </head>
 
 <!--SIDENAV MENU-->
@@ -25,10 +26,9 @@
   <!--Sidenav Menu Hamburger Icon-->
   <a class = "box-shadow-menu" onclick="openNav()"></a>
 
-<body>
+<body onload = "addProfsToPage()">
   <div class="clearBar">
     <h1> BANDER </h1>
-    <body onload = "addProfsToPage()">
     <br>
     <br>
     <br>
@@ -50,7 +50,6 @@
     <div id = "not-menu">
     </div>
  </div>
-  <script src="js/browseFeature.js"></script>
 
 
 
