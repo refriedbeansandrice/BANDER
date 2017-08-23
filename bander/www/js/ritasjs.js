@@ -12,21 +12,24 @@ var database = firebase.database();
 
 
 function sendInfotoAbigail(){
-  sessionStorage.setItem("username", document.getElementById("loadKey").value);
-  window.location.href = "banderm.html";
-}
+  var username = document.getElementById('loadKey').value;
+  var password = document.getElementById('loadValue').value;
 
-/*
-function loadData(){
-  var key = document.getElementById('loadKey').value;
-  database.ref(key).once('value').then(function(snapshot){
-    var json = snapshot.val();
-    var toBeDisplayed = "";
-    if (json != null){
-      toBeDisplayed = snapshot.val().theVal;
+  database.ref("users/" + username).once('value').then(function(snapshot){
+    var toBeDisplayed = ""
+    var entiredictionary = snapshot.val();
+    if (entiredictionary != null){
+      var theirpassword = entiredictionary["password"]
+      if (theirpassword == password){
+        sessionStorage.setItem("username", document.getElementById("loadKey").value);
+        window.location.href = "banderm.html";
+      }
+      else{
+        toBeDisplayed = "Incorrect Password";
+      }
     } else {
-      toBeDisplayed = "Sorry, couldn't find that key :(";
+      toBeDisplayed = "Sorry, that user does not exist.";
     }
     document.getElementById('valueShown').innerHTML = toBeDisplayed;
   });
-}*/
+}
