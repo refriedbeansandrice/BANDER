@@ -7,8 +7,9 @@
   <!--importing js and css files-->
   <!--<script src="js/pullMenu.js"></script>-->
   <link rel = "stylesheet" type = "text/css" href = "css/pullMenu.css">
-  <link rel = "stylesheet" type = "text/css" href = "css/browseFeature.css">
+  <link rel = "stylesheet" type = "text/css" href = "css/yourProfile.css">
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
   <script src = "js/yourProfile.js"></script>
   <script src = "js/pullMenu.js"></script>
 </head>
@@ -27,23 +28,37 @@
   <!--Sidenav Menu Hamburger Icon-->
   <a class = "box-shadow-menu" onclick="openNav()"></a>
 
+<div class="clearBar">
+
+  <h1>BANDER</h1>
   <!--NOT MENU PAGE CONTENT-->
   <div id = "not-menu">
     <!--Profile content-->
+    <h2>Welcome!</h2>
+    <br>
+    <h3 id="name">The person's name</h3>
+    <br>
     <p id = "instruments">Instrument list</p>
+    <br>
     <p id="experience"></p>
+    <br>
     <p id="location"></p>
+    <br>
     <img id = "userPhoto" src = "img/defaultProf.png" alt="default profile image" style="width: 30%; height: 30%">
+    <br>
     <p id="username"></p>
-    <h1 id="name">The person's name</h1>
+    <br>
     <p id="gender">The person's gender</p>
+    <br>
     <p id="about"></p> <!--in browse feature take this out-->
+    <br>
 
     <!--Like button
     <button>
       <img src = "img/check.png" alt="like button"> NOTE: in browse feature add back in
     </button>-->
   </div>
+</div>
 </body>
 
 </html>
