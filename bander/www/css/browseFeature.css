@@ -1,7 +1,7 @@
 body {
   background-repeat: no-repeat;
   text-align: center;
-  background-image: url(../img/whiteconcert.jpg);
+  background-image: url(../img/feet.jpg);
   background-size: 100%;
   background-attachment: fixed;
 }
@@ -30,7 +30,7 @@ h2 { /*styling for the header "Search Bander"*/
 
 /*"body" of page*/
 #not-menu{
-  
+
 }
 
 /*user photo*/

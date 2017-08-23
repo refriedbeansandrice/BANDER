@@ -77,11 +77,11 @@ function uploadProfile(){
     location : theLocation,
     picture : file.name,
     instruments : {
-      guitar : guitarValue,
-      vocals : vocalsValue,
-      drums : drumsValue,
-      piano : pianoValue,
-      ukulele : ukuleleValue
+      Guitar : guitarValue,
+      Vocals : vocalsValue,
+      Drums : drumsValue,
+      Piano : pianoValue,
+      Ukulele : ukuleleValue
     }});
     console.log("about to store picture");
     var whereToPutPicture = storageRef.child("users/" + theUsername + "/" + file.name);
