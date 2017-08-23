@@ -33,11 +33,12 @@
 }
 
 #threebars {
-  /*position: static;*/
-position: fixed;
- top: 8px;
- left: 16px;
- font-size: 18px;
+  position: fixed;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  width: 5%;
+  height: 10%;
 }
 
 /*Sidenav Menu Hamburger Icon Position
