@@ -167,9 +167,11 @@ function addProfsToPage(){
     var specificProfile = profilesToAdd[i];
     var profile = document.createElement("p");
     profile.className = "userCSS";
-    profile.innerHTML = specificProfile;
+    profile.innerHTML = "@" + specificProfile;
     profile.onclick = function(profile){
       var chosenUsername = this.innerHTML;
+      chosenUsername = chosenUsername.replace("@", "");
+      //console.log(chosenUsername);
       sessionStorage.setItem("otherUser", chosenUsername);
       window.location.href="otherProfile.html";
     }
