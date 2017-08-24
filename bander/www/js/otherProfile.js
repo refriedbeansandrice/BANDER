@@ -31,9 +31,10 @@ function loadingPage(){
    document.getElementById("instruments").innerHTML = instrumentsInfo;
    document.getElementById("experience").innerHTML = "Experience: " + userinfo.skill;
    document.getElementById("location").innerHTML = "Location: " + userinfo.location;
-   document.getElementById("username").innerHTML = user;
+   document.getElementById("email").innerHTML = "Email: " + userinfo.email;
+   document.getElementById("username").innerHTML = "@" + user;
    document.getElementById("name").innerHTML = userinfo.name;
-   document.getElementById("gender").innerHTML = userinfo.gender;
+   document.getElementById("gender").innerHTML = "Gender: " + userinfo.gender;
    document.getElementById("about").innerHTML = "About: " + userinfo.about;
    storageRef.child('users/' + user + "/" + userinfo.picture).getDownloadURL().then(function(url) {
      var img = document.getElementById("userPhoto");
