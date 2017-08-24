@@ -4,6 +4,13 @@
   text-align: center;
 }
 
+#userPhoto {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+}
+
 body {
   background-repeat: no-repeat;
   text-align: center;
