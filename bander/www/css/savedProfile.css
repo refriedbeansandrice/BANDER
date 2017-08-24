@@ -35,3 +35,12 @@ h2 {
   padding: 0%;
   text-align: center;
 }
+
+p{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 90%;
+}
+
+h3{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
