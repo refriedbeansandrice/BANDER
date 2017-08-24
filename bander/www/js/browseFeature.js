@@ -166,6 +166,7 @@ function addProfsToPage(){
   for (var i = 0; i < profilesToAdd.length; i++){
     var specificProfile = profilesToAdd[i];
     var profile = document.createElement("p");
+    profile.className = "userCSS";
     profile.innerHTML = specificProfile;
     profile.onclick = function(profile){
       var chosenUsername = this.innerHTML;

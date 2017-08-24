@@ -21,12 +21,14 @@ p {
   text-align: center;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 120%;
+  color: black;
 }
 
 h1 {
   font-size: 350%;
   font-family: 'Monoton', cursive;
   letter-spacing: 20px;
+  line-height: 1em;
 }
 
 h2 { /*styling for the header "Search Bander"*/
@@ -65,4 +67,14 @@ button{
 img{
   height: 50px;
   width: 50px;
+}
+
+.userCSS{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  width: 220px;
+  padding: 10px;
+  border: 3px solid black;
+  text-align: center;
+  display: block;
+  margin: auto;
 }
