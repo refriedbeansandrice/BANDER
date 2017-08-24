@@ -17,6 +17,16 @@ var database = firebase.database();
 var storage = firebase.storage();
 var storageRef = storage.ref();
 
+function doesShit(){
+    var username = document.getElementById("username").value;
+     sessionStorage.setItem("username", username);
+    /*  var whereToPutPicture = storageRef.child("users/" + username + "/" + file.name);
+      whereToPutPicture.put(file, metadata).then(function(snapshot) {
+      var url = snapshot.downloadURL;
+      console.log('File available at', url);
+    });*/
+      window.location.href="banderm.html";
+}
 
 function uploadProfile(){
   console.log('hereitis');
@@ -90,11 +100,10 @@ function uploadProfile(){
     whereToPutPicture.put(file, metadata).then(function(snapshot) {
     var url = snapshot.downloadURL;
     console.log('File available at', url);
-    window.location.href="banderm.html";
+    doesShit();
   });
   } else {
-    console.log("U SUCK U SUCK U SUCUK")
-    document.getElementById("error").innerHTML = "enter a username pls"
+    document.getElementById("error").innerHTML = "Enter a username please."
   }
 }
 
